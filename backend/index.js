@@ -68,6 +68,9 @@ app.delete('/api/consultations/:id', async (req, res) => {
     res.status(500).json({ message: "Error deleting entry", error: err.toString() });
   }
 });
+app.get('/testing', (req, res) => {  
+  res.send('API is running...');
+});
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`API running on port ${PORT}`));
