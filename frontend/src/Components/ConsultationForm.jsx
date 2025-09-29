@@ -173,7 +173,7 @@ export default function ConsultationForm() {
       
       <div>
         <ReCAPTCHA
-          sitekey="6LcFXM4rAAAAAEDoJo9n_xTsvARSSpYlAIUOYNGH"
+          sitekey="6LcEXM4rAAAAACXH_v75PU1BFgitK2_sPMARAt6n"
           onChange={onRecaptcha}
         />
         <p className="text-red-500">{errors.recaptcha?.message}</p>
