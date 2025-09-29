@@ -48,7 +48,8 @@ app.post('/api/consultations', async (req, res) => {
       pageUrl: req.headers.referer || 'unknown',
       ipAddress: req.ip || req.connection.remoteAddress || 'unknown',
     });
-    await submission.save();
+   const data = await submission.save();
+   console.log('New submission saved:', data);
     res.status(201).json({ message: 'Submission saved', submission });
   } catch (err) {
     res.status(500).json({ message: 'Error saving submission', error: err.toString() });
