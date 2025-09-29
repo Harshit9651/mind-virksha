@@ -60,7 +60,7 @@ export default function ConsultationForm() {
     setMessageType("");
 
     try {
-      const response = await fetch("/api/consultations", {
+      const response = await fetch("https://mind-virksha-suv9.vercel.app/api/consultations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
